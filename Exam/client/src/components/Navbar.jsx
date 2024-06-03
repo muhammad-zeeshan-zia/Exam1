@@ -6,7 +6,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [isResp, setIsResp] = useState(false);
   return (
-    <nav className="navbar">
+    <nav className="navbar z-30">
       <h3 className="logo" style={{ fontSize: "38px" }}>
         FSWD
       </h3>
@@ -23,19 +23,9 @@ const Navbar = () => {
         </Link>
 
         <Link to="#" className="contact">
-          <li>Contact</li>
+          <li>Contact US</li>
         </Link>
 
-        <Link to="#" className="product">
-          <li>Products</li>
-        </Link>
-
-        <Link to="/login" className="signup">
-          <li>Login</li>
-        </Link>
-        <Link to="/register" className="signup">
-          <li>Register</li>
-        </Link>
       </ul>
 
       <button className="res-menu-icon" onClick={() => setIsResp(!isResp)}>

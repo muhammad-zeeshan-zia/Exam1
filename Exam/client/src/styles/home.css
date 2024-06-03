@@ -1,0 +1,17 @@
+h1.heading1 {
+  font-size: 50px;
+}
+
+p.para1 {
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  p.para1 {
+    font-size: 15px;
+  }
+
+  h1.heading1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+}

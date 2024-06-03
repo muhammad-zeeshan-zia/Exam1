@@ -1,0 +1,43 @@
+body,
+html {
+  overflow: auto;
+}
+
+.background-image {
+  height: 100vh;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ) !important; /* Adjust the alpha (fourth parameter) to set the transparency */
+  border-radius: 1rem;
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(15px);
+  z-index: -1; /* Place it behind the other content */
+}
+
+.custom-card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+}
+
+.footer {
+  padding: 10px 0;
+}

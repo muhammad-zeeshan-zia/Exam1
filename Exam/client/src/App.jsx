@@ -5,6 +5,9 @@ import Login from "./pages/Login";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Form from "./pages/Register";
+import Congratulations from "./pages/Congratulations";
+import Display from "./pages/Display";
+
 
 function App() {
   return (
@@ -13,7 +16,9 @@ function App() {
         <Routes>
           <Route path="/register" element={<Form />}></Route>
           <Route path="/login" element={<Login />}></Route>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Congratulations/>}></Route>
+          <Route path="/view" element={<Display/>}></Route>
+
         </Routes>
       </BrowserRouter>
     </>

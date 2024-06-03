@@ -53,7 +53,7 @@ const Form = () => {
                   }}
                 >
                   <div className="card-body  shadow-5 text-center">
-                    <h2 className="fw-bold  text-3xl">Contact Us</h2>
+                    <h2 style={{color:"#e17055"}} className="fw-bold  text-3xl">Contact Us</h2>
                     <form onSubmit={handleSubmit}>
                      
                         <div className="form-outline mb-4">
@@ -135,12 +135,12 @@ const Form = () => {
                       <button
                         style={{
                           width: "150px",
-                          backgroundColor: "#232F3E",
-                          height: "35px",
+                          backgroundColor: "#fd79a8",
+                          height: "40px",
                           borderRadius: "14px",
                         }}
                         type="submit"
-                        className="btn"
+                        className="btn font-bold"
                       >
                         <span style={{ color: "white" }}>Submit</span>
                       </button>

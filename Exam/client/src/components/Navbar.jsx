@@ -14,7 +14,7 @@ const Navbar = () => {
         className={isResp ? "nav-links-resp" : "nav-links"}
         onClick={() => setIsResp(false)}
       >
-        <Link to="/" className="home">
+        <Link to="/register" className="home">
           <li>Home</li>
         </Link>
 
@@ -24,6 +24,9 @@ const Navbar = () => {
 
         <Link to="#" className="contact">
           <li>Contact US</li>
+        </Link>
+        <Link to="/view" className="contact">
+          <li>All Details</li>
         </Link>
 
       </ul>

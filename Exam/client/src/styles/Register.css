@@ -26,11 +26,11 @@ html {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("2.jpeg");
+  background-image: url("https://t3.ftcdn.net/jpg/02/90/89/76/360_F_290897614_7RdAsk2GmumcGWZ2qklmV74hKlNmznSx.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(15px);
+  filter: blur(10px);
   z-index: -1; /* Place it behind the other content */
 }
 

@@ -1,6 +1,7 @@
 const express = require('express');
 
 const User = require('../models/user');
+const user = require('../models/user');
 const router = express.Router();
 
 // create user API (registration)
@@ -25,25 +26,15 @@ router.post('/register', async (req, res) => {
 });
 
 // login API
-router.post('/login', async (req, res) => {
-    try {
-        const user = await User.findOne({ email: req.body.email });
-
-        if (!user) {
-            return res.status(400).json({ message: "User not found" });
-        }
-
-        const validPassword = await bcrypt.compare(req.body.password, user.password);
-
-        if (!validPassword) {
-            return res.status(400).json({ message: "Invalid password" });
-        }
-
-        res.json({ message: "Login successful", user: { id: user._id, username: user.username, email: user.email, firstname: user.firstname, lastname: user.lastname, role: user.role } });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: "Server Error" });
+router.get('/getdata',async(req,res)=>{
+    try{
+            const data = await user.find();
+            res.status(200).json(data);
     }
-});
+    catch(err)
+    {   res.status(500).json("Error Fetching data");
+        console.log(err);
+    }
+})
 
 module.exports = router;
